@@ -1,0 +1,6 @@
+framework module Pods_MagicTravel_MagicTravelUITests {
+  umbrella header "Pods-MagicTravel-MagicTravelUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

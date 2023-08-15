@@ -16,22 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HNX-B4-Bv0">
+                                <rect key="frame" x="8" y="111" width="377" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lPR-or-87n"/>
+                                </connections>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d9V-jA-rPD">
-                                <rect key="frame" x="0.0" y="119" width="393" height="683"/>
+                                <rect key="frame" x="0.0" y="175" width="393" height="627"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="jTh-FZ-rYf">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="d9V-jA-rPD" firstAttribute="top" secondItem="HNX-B4-Bv0" secondAttribute="bottom" constant="8" id="883-aW-puf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d9V-jA-rPD" secondAttribute="trailing" id="Fvb-IK-YiN"/>
-                            <constraint firstItem="d9V-jA-rPD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="JkI-Yp-Mco"/>
+                            <constraint firstItem="jTh-FZ-rYf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Izw-MV-yP2"/>
+                            <constraint firstItem="HNX-B4-Bv0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="QPX-O3-khv"/>
                             <constraint firstItem="d9V-jA-rPD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tzf-L4-mEV"/>
+                            <constraint firstItem="HNX-B4-Bv0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="VpB-C5-iM8"/>
+                            <constraint firstItem="jTh-FZ-rYf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kAY-AF-a3T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d9V-jA-rPD" secondAttribute="bottom" constant="16" id="kLY-hX-zxm"/>
+                            <constraint firstAttribute="trailing" secondItem="HNX-B4-Bv0" secondAttribute="trailing" constant="8" id="shA-5P-nfe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cities" id="pPh-6r-Y7G"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="jTh-FZ-rYf" id="fk5-0w-bW4"/>
+                        <outlet property="searchBar" destination="HNX-B4-Bv0" id="AEZ-9T-Cdr"/>
                         <outlet property="tableView" destination="d9V-jA-rPD" id="5Kd-DA-wxy"/>
                     </connections>
                 </viewController>

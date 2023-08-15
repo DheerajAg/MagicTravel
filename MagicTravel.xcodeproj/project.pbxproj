@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F97DDF4BAC3F014AA44051C /* Pods_MagicTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1AD091F43D902E01AD16E4 /* Pods_MagicTravel.framework */; };
+		4A4F35145D504FBAFEEAC1A5 /* Pods_MagicTravelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6257DE6BFBAF29C0FF6AA6BF /* Pods_MagicTravelTests.framework */; };
 		B14947672A8A901F00AC2314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14947662A8A901F00AC2314 /* AppDelegate.swift */; };
 		B14947692A8A901F00AC2314 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14947682A8A901F00AC2314 /* SceneDelegate.swift */; };
 		B149476B2A8A901F00AC2314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149476A2A8A901F00AC2314 /* ViewController.swift */; };
@@ -16,6 +18,11 @@
 		B149477E2A8A902000AC2314 /* MagicTravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149477D2A8A902000AC2314 /* MagicTravelTests.swift */; };
 		B14947882A8A902000AC2314 /* MagicTravelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14947872A8A902000AC2314 /* MagicTravelUITests.swift */; };
 		B149478A2A8A902000AC2314 /* MagicTravelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14947892A8A902000AC2314 /* MagicTravelUITestsLaunchTests.swift */; };
+		B149479B2A8B660700AC2314 /* CocktailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149479A2A8B660700AC2314 /* CocktailService.swift */; };
+		B149479D2A8B682B00AC2314 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149479C2A8B682B00AC2314 /* HomeViewModel.swift */; };
+		B149479F2A8B7DAC00AC2314 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149479E2A8B7DAC00AC2314 /* DataError.swift */; };
+		B14947A12A8B7E5400AC2314 /* CocktailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14947A02A8B7E5400AC2314 /* CocktailData.swift */; };
+		B3497ACCACB3655000881D5C /* Pods_MagicTravel_MagicTravelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F740AA4C8559FE40C60C47C0 /* Pods_MagicTravel_MagicTravelUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1AD091F43D902E01AD16E4 /* Pods_MagicTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6257DE6BFBAF29C0FF6AA6BF /* Pods_MagicTravelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTravelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E1B52F5E6713BE69522796 /* Pods-MagicTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-MagicTravelTests/Pods-MagicTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A105623499EA71F2DAE2851A /* Pods-MagicTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTravel.debug.xcconfig"; path = "Target Support Files/Pods-MagicTravel/Pods-MagicTravel.debug.xcconfig"; sourceTree = "<group>"; };
 		B14947632A8A901F00AC2314 /* MagicTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14947662A8A901F00AC2314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14947682A8A901F00AC2314 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +60,15 @@
 		B14947832A8A902000AC2314 /* MagicTravelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicTravelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14947872A8A902000AC2314 /* MagicTravelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicTravelUITests.swift; sourceTree = "<group>"; };
 		B14947892A8A902000AC2314 /* MagicTravelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicTravelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B149479A2A8B660700AC2314 /* CocktailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailService.swift; sourceTree = "<group>"; };
+		B149479C2A8B682B00AC2314 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B149479E2A8B7DAC00AC2314 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		B14947A02A8B7E5400AC2314 /* CocktailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailData.swift; sourceTree = "<group>"; };
+		EFCB81E14DCC59AA036B75D3 /* Pods-MagicTravel-MagicTravelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTravel-MagicTravelUITests.debug.xcconfig"; path = "Target Support Files/Pods-MagicTravel-MagicTravelUITests/Pods-MagicTravel-MagicTravelUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0EFEC9E3AB44022AE654972 /* Pods-MagicTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTravel.release.xcconfig"; path = "Target Support Files/Pods-MagicTravel/Pods-MagicTravel.release.xcconfig"; sourceTree = "<group>"; };
+		F740AA4C8559FE40C60C47C0 /* Pods_MagicTravel_MagicTravelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTravel_MagicTravelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D116C13B0FC9059FAEC34D /* Pods-MagicTravelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTravelTests.release.xcconfig"; path = "Target Support Files/Pods-MagicTravelTests/Pods-MagicTravelTests.release.xcconfig"; sourceTree = "<group>"; };
+		FFAE61B491ADEB7A3B838961 /* Pods-MagicTravel-MagicTravelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTravel-MagicTravelUITests.release.xcconfig"; path = "Target Support Files/Pods-MagicTravel-MagicTravelUITests/Pods-MagicTravel-MagicTravelUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F97DDF4BAC3F014AA44051C /* Pods_MagicTravel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4F35145D504FBAFEEAC1A5 /* Pods_MagicTravelTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3497ACCACB3655000881D5C /* Pods_MagicTravel_MagicTravelUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EDE0DB29921181927D460A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F1AD091F43D902E01AD16E4 /* Pods_MagicTravel.framework */,
+				F740AA4C8559FE40C60C47C0 /* Pods_MagicTravel_MagicTravelUITests.framework */,
+				6257DE6BFBAF29C0FF6AA6BF /* Pods_MagicTravelTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B149475A2A8A901F00AC2314 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +116,8 @@
 				B149477C2A8A902000AC2314 /* MagicTravelTests */,
 				B14947862A8A902000AC2314 /* MagicTravelUITests */,
 				B14947642A8A901F00AC2314 /* Products */,
+				E6DBB247F43B1F1C6CD44DAB /* Pods */,
+				5EDE0DB29921181927D460A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +134,10 @@
 		B14947652A8A901F00AC2314 /* MagicTravel */ = {
 			isa = PBXGroup;
 			children = (
+				B14947972A8B65C800AC2314 /* Data Layer */,
+				B14947962A8B65AC00AC2314 /* UI Layer */,
 				B14947662A8A901F00AC2314 /* AppDelegate.swift */,
 				B14947682A8A901F00AC2314 /* SceneDelegate.swift */,
-				B149476A2A8A901F00AC2314 /* ViewController.swift */,
-				B149476C2A8A901F00AC2314 /* Main.storyboard */,
 				B149476F2A8A902000AC2314 /* Assets.xcassets */,
 				B14947712A8A902000AC2314 /* LaunchScreen.storyboard */,
 				B14947742A8A902000AC2314 /* Info.plist */,
@@ -127,6 +162,55 @@
 			path = MagicTravelUITests;
 			sourceTree = "<group>";
 		};
+		B14947962A8B65AC00AC2314 /* UI Layer */ = {
+			isa = PBXGroup;
+			children = (
+				B149476C2A8A901F00AC2314 /* Main.storyboard */,
+				B149476A2A8A901F00AC2314 /* ViewController.swift */,
+				B149479C2A8B682B00AC2314 /* HomeViewModel.swift */,
+			);
+			path = "UI Layer";
+			sourceTree = "<group>";
+		};
+		B14947972A8B65C800AC2314 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				B14947992A8B65DB00AC2314 /* Models */,
+				B14947982A8B65D400AC2314 /* Networking */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		B14947982A8B65D400AC2314 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B149479A2A8B660700AC2314 /* CocktailService.swift */,
+				B149479E2A8B7DAC00AC2314 /* DataError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B14947992A8B65DB00AC2314 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B14947A02A8B7E5400AC2314 /* CocktailData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E6DBB247F43B1F1C6CD44DAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A105623499EA71F2DAE2851A /* Pods-MagicTravel.debug.xcconfig */,
+				F0EFEC9E3AB44022AE654972 /* Pods-MagicTravel.release.xcconfig */,
+				EFCB81E14DCC59AA036B75D3 /* Pods-MagicTravel-MagicTravelUITests.debug.xcconfig */,
+				FFAE61B491ADEB7A3B838961 /* Pods-MagicTravel-MagicTravelUITests.release.xcconfig */,
+				76E1B52F5E6713BE69522796 /* Pods-MagicTravelTests.debug.xcconfig */,
+				F8D116C13B0FC9059FAEC34D /* Pods-MagicTravelTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B149478D2A8A902000AC2314 /* Build configuration list for PBXNativeTarget "MagicTravel" */;
 			buildPhases = (
+				012091320C3D96B0E0DF0950 /* [CP] Check Pods Manifest.lock */,
 				B149475F2A8A901F00AC2314 /* Sources */,
 				B14947602A8A901F00AC2314 /* Frameworks */,
 				B14947612A8A901F00AC2314 /* Resources */,
+				74F8F0917F91EA322218CBDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B14947902A8A902000AC2314 /* Build configuration list for PBXNativeTarget "MagicTravelTests" */;
 			buildPhases = (
+				41BB62FB4F20F927C97B7AF2 /* [CP] Check Pods Manifest.lock */,
 				B14947752A8A902000AC2314 /* Sources */,
 				B14947762A8A902000AC2314 /* Frameworks */,
 				B14947772A8A902000AC2314 /* Resources */,
@@ -169,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B14947932A8A902000AC2314 /* Build configuration list for PBXNativeTarget "MagicTravelUITests" */;
 			buildPhases = (
+				4E16F3679C4CE3E32E17328A /* [CP] Check Pods Manifest.lock */,
 				B149477F2A8A902000AC2314 /* Sources */,
 				B14947802A8A902000AC2314 /* Frameworks */,
 				B14947812A8A902000AC2314 /* Resources */,
+				77D71D31DE06C3B3994A94A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,13 +342,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		012091320C3D96B0E0DF0950 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MagicTravel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41BB62FB4F20F927C97B7AF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MagicTravelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E16F3679C4CE3E32E17328A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MagicTravel-MagicTravelUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74F8F0917F91EA322218CBDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagicTravel/Pods-MagicTravel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagicTravel/Pods-MagicTravel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagicTravel/Pods-MagicTravel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77D71D31DE06C3B3994A94A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagicTravel-MagicTravelUITests/Pods-MagicTravel-MagicTravelUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagicTravel-MagicTravelUITests/Pods-MagicTravel-MagicTravelUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagicTravel-MagicTravelUITests/Pods-MagicTravel-MagicTravelUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B149475F2A8A901F00AC2314 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B149479F2A8B7DAC00AC2314 /* DataError.swift in Sources */,
 				B149476B2A8A901F00AC2314 /* ViewController.swift in Sources */,
+				B14947A12A8B7E5400AC2314 /* CocktailData.swift in Sources */,
 				B14947672A8A901F00AC2314 /* AppDelegate.swift in Sources */,
+				B149479B2A8B660700AC2314 /* CocktailService.swift in Sources */,
+				B149479D2A8B682B00AC2314 /* HomeViewModel.swift in Sources */,
 				B14947692A8A901F00AC2314 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +628,7 @@
 		};
 		B149478E2A8A902000AC2314 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A105623499EA71F2DAE2851A /* Pods-MagicTravel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +656,7 @@
 		};
 		B149478F2A8A902000AC2314 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0EFEC9E3AB44022AE654972 /* Pods-MagicTravel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -486,6 +684,7 @@
 		};
 		B14947912A8A902000AC2314 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76E1B52F5E6713BE69522796 /* Pods-MagicTravelTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +704,7 @@
 		};
 		B14947922A8A902000AC2314 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D116C13B0FC9059FAEC34D /* Pods-MagicTravelTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +724,7 @@
 		};
 		B14947942A8A902000AC2314 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFCB81E14DCC59AA036B75D3 /* Pods-MagicTravel-MagicTravelUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +742,7 @@
 		};
 		B14947952A8A902000AC2314 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFAE61B491ADEB7A3B838961 /* Pods-MagicTravel-MagicTravelUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
