@@ -110,14 +110,12 @@ extension ViewController: UITableViewDelegate {
 //MARK: UISearchBarDelegate
 extension ViewController: UISearchBarDelegate {
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        
         print("didtapSeachBar")
         return true
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         self.view.endEditing(true)
-        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

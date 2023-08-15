@@ -14,7 +14,7 @@ protocol CocktailProtocol {
 class CocktailService: CocktailProtocol {
     
     private struct Constants {
-        static let url = "www.thecocktaildb.com/api/json/v1/1/search.php"
+        static let url = "www.thecocktaildb.com/api/json/v1/1/search.php?s=a"
     }
     
     func getCocktailWithLetter(text: String, completion: @escaping (CocktailList) -> Void) {
@@ -23,18 +23,22 @@ class CocktailService: CocktailProtocol {
         })
     }
     
-    private func retrieveCocktailData(text: String, completion: @escaping (CocktailList) -> Void ) {
+    private func createUrl(text: String) -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "www.thecocktaildb.com"
         urlComponents.path = "/api/json/v1/1/search.php"
         urlComponents.queryItems = [URLQueryItem(name: "s", value: text)]
+        return urlComponents.url
+    }
+    
+    private func retrieveCocktailData(text: String, completion: @escaping (CocktailList) -> Void ) {
         
-        if let url = urlComponents.url {
+        if let url = createUrl(text: text) {
             let urlSession = URLSession(configuration: .default)
             
             let task = urlSession.dataTask(with: url) { (data, response, error) in
-                print("response is \(String(describing: response))")
+                
                 guard let data = data else {
                     print("error occured \(String(describing: error))")
                     return
@@ -47,7 +51,6 @@ class CocktailService: CocktailProtocol {
                 } catch let error {
                     print("error in decoding \(error.localizedDescription)")
                 }
-                
             }
             task.resume()
         }
