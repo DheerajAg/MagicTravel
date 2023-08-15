@@ -65,6 +65,12 @@ class ViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    public func openResultView(with data: CocktailList?) {
+        let vc = ResultListViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        vc.setupWithdata(data: data)
+    }
 }
 
 // MARK: UITableViewDataSource
@@ -94,16 +100,9 @@ extension ViewController: UITableViewDataSource {
 // MARK: UITableViewDelegate
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = UIViewController()
-        if indexPath.row % 2 == 0 {
-            vc.view.backgroundColor = .blue
-            navigationController?.present(vc, animated: true)
-        } else {
-            vc.view.backgroundColor = .green
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        viewModel.searchCocktail(text: alphabets[indexPath.row])
+        
     }
 }
 

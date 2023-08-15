@@ -22,6 +22,11 @@
 		B149479D2A8B682B00AC2314 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149479C2A8B682B00AC2314 /* HomeViewModel.swift */; };
 		B149479F2A8B7DAC00AC2314 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149479E2A8B7DAC00AC2314 /* DataError.swift */; };
 		B14947A12A8B7E5400AC2314 /* CocktailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14947A02A8B7E5400AC2314 /* CocktailData.swift */; };
+		B14947A52A8BE7CE00AC2314 /* ResultListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14947A42A8BE7CE00AC2314 /* ResultListViewModel.swift */; };
+		B14947A82A8BE80100AC2314 /* ResultListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14947A62A8BE80100AC2314 /* ResultListViewController.swift */; };
+		B14947A92A8BE80100AC2314 /* ResultListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B14947A72A8BE80100AC2314 /* ResultListViewController.xib */; };
+		B14947AD2A8BE8AB00AC2314 /* ResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14947AB2A8BE8AB00AC2314 /* ResultCollectionViewCell.swift */; };
+		B14947AE2A8BE8AB00AC2314 /* ResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B14947AC2A8BE8AB00AC2314 /* ResultCollectionViewCell.xib */; };
 		B3497ACCACB3655000881D5C /* Pods_MagicTravel_MagicTravelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F740AA4C8559FE40C60C47C0 /* Pods_MagicTravel_MagicTravelUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +69,11 @@
 		B149479C2A8B682B00AC2314 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B149479E2A8B7DAC00AC2314 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		B14947A02A8B7E5400AC2314 /* CocktailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailData.swift; sourceTree = "<group>"; };
+		B14947A42A8BE7CE00AC2314 /* ResultListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListViewModel.swift; sourceTree = "<group>"; };
+		B14947A62A8BE80100AC2314 /* ResultListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListViewController.swift; sourceTree = "<group>"; };
+		B14947A72A8BE80100AC2314 /* ResultListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultListViewController.xib; sourceTree = "<group>"; };
+		B14947AB2A8BE8AB00AC2314 /* ResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCollectionViewCell.swift; sourceTree = "<group>"; };
+		B14947AC2A8BE8AB00AC2314 /* ResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		EFCB81E14DCC59AA036B75D3 /* Pods-MagicTravel-MagicTravelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTravel-MagicTravelUITests.debug.xcconfig"; path = "Target Support Files/Pods-MagicTravel-MagicTravelUITests/Pods-MagicTravel-MagicTravelUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0EFEC9E3AB44022AE654972 /* Pods-MagicTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicTravel.release.xcconfig"; path = "Target Support Files/Pods-MagicTravel/Pods-MagicTravel.release.xcconfig"; sourceTree = "<group>"; };
 		F740AA4C8559FE40C60C47C0 /* Pods_MagicTravel_MagicTravelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagicTravel_MagicTravelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,9 +175,9 @@
 		B14947962A8B65AC00AC2314 /* UI Layer */ = {
 			isa = PBXGroup;
 			children = (
-				B149476C2A8A901F00AC2314 /* Main.storyboard */,
-				B149476A2A8A901F00AC2314 /* ViewController.swift */,
-				B149479C2A8B682B00AC2314 /* HomeViewModel.swift */,
+				B14947AF2A8C05C200AC2314 /* CocktailDetail */,
+				B14947A32A8BE79500AC2314 /* ResultList */,
+				B14947A22A8BE78100AC2314 /* HomeView */,
 			);
 			path = "UI Layer";
 			sourceTree = "<group>";
@@ -196,6 +206,43 @@
 				B14947A02A8B7E5400AC2314 /* CocktailData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B14947A22A8BE78100AC2314 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B149476C2A8A901F00AC2314 /* Main.storyboard */,
+				B149476A2A8A901F00AC2314 /* ViewController.swift */,
+				B149479C2A8B682B00AC2314 /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		B14947A32A8BE79500AC2314 /* ResultList */ = {
+			isa = PBXGroup;
+			children = (
+				B14947AA2A8BE88D00AC2314 /* Cells */,
+				B14947A42A8BE7CE00AC2314 /* ResultListViewModel.swift */,
+				B14947A62A8BE80100AC2314 /* ResultListViewController.swift */,
+				B14947A72A8BE80100AC2314 /* ResultListViewController.xib */,
+			);
+			path = ResultList;
+			sourceTree = "<group>";
+		};
+		B14947AA2A8BE88D00AC2314 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B14947AB2A8BE8AB00AC2314 /* ResultCollectionViewCell.swift */,
+				B14947AC2A8BE8AB00AC2314 /* ResultCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B14947AF2A8C05C200AC2314 /* CocktailDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CocktailDetail;
 			sourceTree = "<group>";
 		};
 		E6DBB247F43B1F1C6CD44DAB /* Pods */ = {
@@ -322,7 +369,9 @@
 			files = (
 				B14947732A8A902000AC2314 /* LaunchScreen.storyboard in Resources */,
 				B14947702A8A902000AC2314 /* Assets.xcassets in Resources */,
+				B14947AE2A8BE8AB00AC2314 /* ResultCollectionViewCell.xib in Resources */,
 				B149476E2A8A901F00AC2314 /* Main.storyboard in Resources */,
+				B14947A92A8BE80100AC2314 /* ResultListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,10 +502,13 @@
 				B149479F2A8B7DAC00AC2314 /* DataError.swift in Sources */,
 				B149476B2A8A901F00AC2314 /* ViewController.swift in Sources */,
 				B14947A12A8B7E5400AC2314 /* CocktailData.swift in Sources */,
+				B14947A82A8BE80100AC2314 /* ResultListViewController.swift in Sources */,
+				B14947A52A8BE7CE00AC2314 /* ResultListViewModel.swift in Sources */,
 				B14947672A8A901F00AC2314 /* AppDelegate.swift in Sources */,
 				B149479B2A8B660700AC2314 /* CocktailService.swift in Sources */,
 				B149479D2A8B682B00AC2314 /* HomeViewModel.swift in Sources */,
 				B14947692A8A901F00AC2314 /* SceneDelegate.swift in Sources */,
+				B14947AD2A8BE8AB00AC2314 /* ResultCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

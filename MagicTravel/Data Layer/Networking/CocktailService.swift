@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CocktailProtocol {
-    func getCocktailWithLetter(text: String, completion: @escaping (CocktailList) -> Void)
+    func getCocktailWithLetter(text: String, completion: @escaping (CocktailList?, DataError?) -> Void)
 }
 
 class CocktailService: CocktailProtocol {
@@ -17,9 +17,9 @@ class CocktailService: CocktailProtocol {
         static let url = "www.thecocktaildb.com/api/json/v1/1/search.php?s=a"
     }
     
-    func getCocktailWithLetter(text: String, completion: @escaping (CocktailList) -> Void) {
-        retrieveCocktailData(text: text, completion: {data in
-            completion(data)
+    func getCocktailWithLetter(text: String, completion: @escaping (CocktailList?, DataError?) -> Void) {
+        retrieveCocktailData(text: text, completion: {(data, error) in
+            completion(data, error)
         })
     }
     
@@ -32,7 +32,7 @@ class CocktailService: CocktailProtocol {
         return urlComponents.url
     }
     
-    private func retrieveCocktailData(text: String, completion: @escaping (CocktailList) -> Void ) {
+    private func retrieveCocktailData(text: String, completion: @escaping (CocktailList?, DataError?) -> Void ) {
         
         if let url = createUrl(text: text) {
             let urlSession = URLSession(configuration: .default)
@@ -41,13 +41,14 @@ class CocktailService: CocktailProtocol {
                 
                 guard let data = data else {
                     print("error occured \(String(describing: error))")
+                    completion(nil, .networkError(error.debugDescription))
                     return
                 }
                 
                 let decoder = JSONDecoder()
                 do {
                     let cocktailData = try decoder.decode(CocktailList.self, from: data)
-                    completion(cocktailData)
+                    completion(cocktailData, nil)
                 } catch let error {
                     print("error in decoding \(error.localizedDescription)")
                 }

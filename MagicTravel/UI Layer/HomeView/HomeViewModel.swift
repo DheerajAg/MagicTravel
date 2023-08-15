@@ -9,11 +9,13 @@ import Foundation
 
 protocol HomeViewModelDelegate: AnyObject {
     func changeLoadingState(start: Bool)
+    func openResultView(with data: CocktailList?)
 }
 
 protocol HomeViewModelProtocol {
     var delegate: HomeViewModelDelegate? { get set }
     func searchCocktail(text: String)
+    func getCocktailData() -> CocktailList?
 }
 
 class HomeViewModel: HomeViewModelProtocol {
@@ -28,13 +30,20 @@ class HomeViewModel: HomeViewModelProtocol {
     
     func searchCocktail(text: String) {
         delegate?.changeLoadingState(start: true)
-        cocktailService.getCocktailWithLetter(text: text) { [weak self] (data) in
-            self?.cocktailData = data
+        cocktailService.getCocktailWithLetter(text: text) { [weak self] (data, error) in
+            if let error = error {
+                print("facing network error \(error)")
+            } else {
+                self?.cocktailData = data
+            }
             DispatchQueue.main.async {
                 self?.delegate?.changeLoadingState(start: false)
+                self?.delegate?.openResultView(with: data)
             }
-            print(self?.cocktailData)
         }
-        print("Searching coktail \(text)")
+    }
+    
+    func getCocktailData() -> CocktailList? {
+        return self.cocktailData
     }
 }
