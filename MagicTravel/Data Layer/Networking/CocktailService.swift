@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol CocktailProtocol {
     func getCocktailWithLetter(text: String, completion: @escaping (CocktailList?, DataError?) -> Void)
@@ -20,6 +21,17 @@ class CocktailService: CocktailProtocol {
     func getCocktailWithLetter(text: String, completion: @escaping (CocktailList?, DataError?) -> Void) {
         retrieveCocktailData(text: text, completion: {(data, error) in
             completion(data, error)
+        })
+    }
+    
+    private func getCocktailList(text: String, completion: @escaping (Swift.Result<CocktailList?, DataError>) -> Void) {
+        AF.request(Constants.url, parameters: ["s": text]).validate().responseDecodable(of: CocktailList.self, completionHandler: { response in
+            switch response.result {
+            case .failure(let error):
+                completion(.failure(.networkError(error.localizedDescription)))
+            case .success(let cocktailList):
+                completion(.success(cocktailList))
+            }
         })
     }
     

@@ -29,7 +29,7 @@ class ResultListViewModel: ResultListViewModelProtocol {
     }
     
     func getDataForCell(at index: IndexPath) -> Drink? {
-        var row = index.row
+        let row = index.row
         return cocktailList?.drinks?[row]
     }
 }

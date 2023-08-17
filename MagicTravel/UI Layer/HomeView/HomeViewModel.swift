@@ -14,7 +14,7 @@ protocol HomeViewModelDelegate: AnyObject {
 
 protocol HomeViewModelProtocol {
     var delegate: HomeViewModelDelegate? { get set }
-    func searchCocktail(text: String)
+    func searchCocktail(text: String, completion: @escaping (DataError?) -> ())
     func getCocktailData() -> CocktailList?
 }
 
@@ -28,16 +28,20 @@ class HomeViewModel: HomeViewModelProtocol {
         self.cocktailService = schoolService
     }
     
-    func searchCocktail(text: String) {
+    func searchCocktail(text: String, completion: @escaping (DataError?) -> ()) {
         delegate?.changeLoadingState(start: true)
         cocktailService.getCocktailWithLetter(text: text) { [weak self] (data, error) in
-            if let error = error {
-                print("facing network error \(error)")
+            DispatchQueue.main.async {
+                self?.delegate?.changeLoadingState(start: false)
+            }
+            if error != nil || data?.drinks == nil {
+                completion(error)
+                print("facing network error \(String(describing: error))")
+                return
             } else {
                 self?.cocktailData = data
             }
             DispatchQueue.main.async {
-                self?.delegate?.changeLoadingState(start: false)
                 self?.delegate?.openResultView(with: data)
             }
         }

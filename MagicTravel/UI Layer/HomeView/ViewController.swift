@@ -71,6 +71,15 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
         vc.setupWithdata(data: data)
     }
+    
+    private func showErrorAlert() {
+        let alert = UIAlertController(title: "Error", message: "Could not retrieve drinks", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(action)
+        DispatchQueue.main.async {
+            self.navigationController?.present(alert, animated: true)
+        }
+    }
 }
 
 // MARK: UITableViewDataSource
@@ -101,7 +110,9 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.searchCocktail(text: alphabets[indexPath.row])
+        viewModel.searchCocktail(text: alphabets[indexPath.row]) { [weak self] error in
+            self?.showErrorAlert()
+        }
         
     }
 }
@@ -119,7 +130,9 @@ extension ViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.view.endEditing(true)
-        viewModel.searchCocktail(text: searchBar.text ?? "")
+        viewModel.searchCocktail(text: searchBar.text ?? "") { [weak self] error in
+            self?.showErrorAlert()
+        }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
